@@ -1,0 +1,8 @@
+bkup/
+data/
+*.csv
+*.json
+*.bak
+*.zip
+*.dump
+*.withkey

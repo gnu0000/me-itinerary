@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <link rel="stylesheet" href="itinerary.css" />
+      <!--<link rel="stylesheet" href="itineraryp.css" media="print" />-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="itinerary.js"></script>
+      <title>Itinerary Generator</title>
+   </head>
+   <body>
+      <template id="table">
+         <table>
+            <tr>
+               <th><button class="go">Go!</button></th>
+               <th class="date" colspan="6" contenteditable="true">{date}</th>
+            </tr>
+            <tr>
+               <th class="day vert" contenteditable="true" rowspan="9"><p>{day}</p></th>
+               <th class="l0" contenteditable="true" >{l0}</th>
+               <th class="l1" contenteditable="true" >{l1}</th>
+               <th class="l2" contenteditable="true" >{l2}</th>
+               <th class="l3" contenteditable="true" >{l3}</th>
+               <th class="l4" contenteditable="true" >{l4}</th>
+               <th class="l5" contenteditable="true" >{l5}</th>
+            </tr>
+         </table>
+      </template>
+      <template id="row">
+         <tr>
+            <td class="c0" contenteditable="true" >{c0}</td>
+            <td class="c1" contenteditable="true" >{c1}</td>
+            <td class="c2" contenteditable="true" >{c2}</td>
+            <td class="c3" contenteditable="true" >{c3}</td>
+            <td class="c4" contenteditable="true" >{c4}</td>
+            <td class="c5" contenteditable="true" >{c5}</td>
+         </tr>
+      </template>
+
+      <div class="header">
+         <img src="/images/swb.png" alt="logo">
+         <h1>Itinerary Generator</h1>
+      </div>
+      <div id="forms">
+         <div id="controls">
+            Start Date: <input type="date" id="date">
+            <input type='button' id='loadBtn' value='Load'>
+            <input type='button' id='saveBtn' value='Save'>
+         </div>
+      </div>
+      <div id="results">
+         <div id="controls2">
+            <button class="print">Print</button>
+            <button class="back">Back</button>
+            <div class="tables">
+            </div>
+      </div>
+
+   </body>
+</html>
+

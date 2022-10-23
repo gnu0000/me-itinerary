@@ -33,12 +33,11 @@ html, body {
    min-width: 30rem;
 }
 
-
 #forms {
    padding-bottom: 1rem;
 }
 
-table {
+table.itinerary {
    border: 2px solid #444;
    width: calc(100% - 2rem);
    border-collapse: collapse; 
@@ -47,42 +46,39 @@ table {
    break-before: auto;
 }
 
-th {
+.itinerary th {
    background: #AAA;
    height: 1.5rem;
    -webkit-print-color-adjust:exact;
    print-color-adjust:exact;
 }
 
-td {
+.itinerary td {
    text-align: center;
    border-bottom: 1px solid #ccc;
    border-right: 1px solid #ccc;
    height: 1.6rem;
 }
 
-th:nth-child(1) {width: 4%}
-th:nth-child(2) {width: 8%}
-th:nth-child(3) {width: 12%}
-th:nth-child(4) {width: 16%}
-th:nth-child(5) {width: 10%}
-th:nth-child(6) {width: 16%}
-th:nth-child(7) {width: 34%}
-td:nth-child(6) {border-right: 1px solid black}
+.itinerary th:nth-child(1) {width: 3rem}   /*day      */
+.itinerary th:nth-child(2) {width: 11%}    /*time     */
+.itinerary th:nth-child(3) {width: 16%}    /*loc      */
+.itinerary th:nth-child(4) {width: 12%}    /*presenter*/
+.itinerary th:nth-child(5) {width: 10%}    /*contact  */
+.itinerary th:nth-child(6) {width: 12%}    /*meal     */
+.itinerary th:nth-child(7) {width: 35%}    /*descr    */
 
-.vert {
-/*    writing-mode: vertical-rl;   */
-}
+.itinerary td:nth-child(6) {border-right: 1px solid black}
 
 .vert p {
-/*    writing-mode: vertical-rl;   */
     text-align:center;
     white-space:nowrap;
     transform: rotate(90deg);
+    width: 3rem;
+    margin-top: -1rem;
 }
 
-
-tr:first-child {
+.itinerary tr:first-child {
     font-size: 1.35em;
     text-decoration: underline;
 }
@@ -92,13 +88,73 @@ tr:first-child {
    font-weight: bold;
 }
 
+.left {
+   float: left;
+   width: 10rem;
+}
+
+.right {
+   text-align: right;
+   float: right;
+   width: 10rem;
+}
+
+.center {
+   text-align: center;
+}
+
 #results table button {
       display: none;
 }
 
+#index {
+   margin: 1em 3em;
+   border-collapse: collapse;
+}
+
+#index th {
+   border-bottom: 2px solid gray;
+   margin: 0.3em 1em;
+   padding: 5px;
+   text-align: left;
+   padding: 5px 10px;
+}
+
+#index td {
+   margin: 0.3em 1em;
+   padding: 5px 10px;
+   border-bottom: 1px solid #F8F8F8;
+}
+
+#index button {
+  transform: scale(0.6);
+}
+
+#index td:nth-child(1) {
+   font-weight: bold;
+}
+
+#index td a {
+   text-decoration: none;
+   color: black;
+   cursor: pointer;
+}
+
+#index td:hover {
+   text-decoration: underline;
+}
+
+#itineraries .cancel {
+   margin-left: 10rem;   
+}
+
+
+
+
+
 @media print {
    body {
-      font-size: 11px;
+      font-size: 12px;
    }
    .header {
       display: none;

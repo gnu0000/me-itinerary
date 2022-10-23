@@ -12,7 +12,7 @@
    </head>
    <body>
       <template id="table">
-         <table>
+         <table class="itinerary">
             <tr>
                <th><button class="go">Go!</button></th>
                <th class="date" colspan="6" contenteditable="true">{date}</th>
@@ -38,26 +38,52 @@
             <td class="c5" contenteditable="true" >{c5}</td>
          </tr>
       </template>
-
+      <template id="itinerary">
+         <tr class="itin" data-id="{id}">
+            <td class="select">{name}</td>
+            <td class="select">{time}</td>
+            <td><button class="delete">x</button></td>
+         </tr>
+      </template>
       <div class="header">
          <img src="/images/swb.png" alt="logo">
          <h1>Itinerary Generator</h1>
       </div>
       <div id="forms">
          <div id="controls">
-            Start Date: <input type="date" id="date">
-            <input type='button' id='loadBtn' value='Load'>
-            <input type='button' id='saveBtn' value='Save'>
+            <div class="left">
+               <button id='newBtn' >New</button>
+               <button id='loadBtn'>Load</button>
+               <button id='saveBtn'>Save</button>
+            </div>
+            <div class="right">
+               <button id='importBtn'>import</button>
+               <button id='exportBtn'>export</button>
+            </div>
+            <div class="center">
+               Itinerary Name: <input type="text" id="name">
+               Start Date: <input type="date" id="date">
+            </div>
          </div>
       </div>
       <div id="results">
          <div id="controls2">
-            <button class="print">Print</button>
-            <button class="back">Back</button>
-            <div class="tables">
-            </div>
+            <button id="printBtn">Print</button>
+            <button id="backBtn">Back</button>
+         </div>
+         <div class="tables">
+         </div>
       </div>
-
+      <div id="itineraries">
+         <table id="index">
+            <thead>
+               <tr><th>Name</th><th>Date</th><th></th></tr>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
+         <button class="cancel">Cancel</button>
+      </div>
    </body>
 </html>
 
